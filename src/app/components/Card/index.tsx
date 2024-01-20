@@ -7,7 +7,7 @@ export const Card: React.FC = () => {
       <div className='bg-slate-500 w-full h-10 p-2 rounded-t-lg'>HEADER</div>
       <div className='bg-slate-400 w-full h-full'>
         <div className='relative h-full'>
-          <Image src='/images/rock.jpg' layout='fill' objectFit='fill' alt='image' />
+          <Image src='/images/rock.jpg' loading='eager' layout='fill' objectFit='fill' alt='image' />
         </div>
       </div>
       <div className='bg-slate-500 w-full h-10 p-2 rounded-b-lg'>FOOTER</div>

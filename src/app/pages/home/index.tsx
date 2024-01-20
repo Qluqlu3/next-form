@@ -25,7 +25,7 @@ export const Home: React.FC<Props> = ({ temp }) => {
   }, []);
 
   return (
-    <div className='flex flex-col gap-y-8 bg-gray-300 h-screen p-5'>
+    <div className='flex flex-col gap-y-8 bg-gray-300 min-h-screen p-5'>
       <h1 className='text-5xl font-bold'>Home</h1>
       <Menu />
       <div className='flex gap-x-3 items-center'>
