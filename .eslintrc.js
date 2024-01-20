@@ -3,7 +3,7 @@ module.exports = {
 		ecmaVersion: 2021, // 使用するECMAScriptのバージョン
 		sourceType: 'module',
 		ecmaFeatures: {
-			jsx: true,
+			tsx: true,
 		},
 	},
 	plugins: ['next'],
