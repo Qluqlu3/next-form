@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-	distDir: '.next_custom',
+	distDir: '.build',
 	webpack: (config, { isServer }) => {
 		if (!isServer) {
 			config.module.rules.unshift({
