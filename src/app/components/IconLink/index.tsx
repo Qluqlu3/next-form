@@ -2,10 +2,11 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactElement, ReactNode } from 'react';
+import { clsx } from 'clsx';
 
 interface Props {
-  href?: string;
-  icon?: ReactElement;
+  href: string;
+  icon: ReactElement;
   prefetch?: boolean;
   children?: ReactNode;
 }
@@ -15,9 +16,9 @@ export const IconLink: React.FC<Props> = ({ icon, href = '/home', prefetch, chil
 
   return (
     <Link
-      href='/home'
+      href={href}
       prefetch={prefetch}
-      className={`rounded-xl cursor-pointer ${href === asPath ? 'bg-green-500' : 'hover:bg-green-100 '}`}
+      className={clsx(href === asPath ? 'bg-green-500' : 'hover:bg-green-100', 'rounded-xl cursor-pointer p-2')}
     >
       <div className='flex'>
         <div>{icon}</div>

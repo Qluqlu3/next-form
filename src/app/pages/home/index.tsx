@@ -3,6 +3,7 @@ import React, { useCallback, useState } from 'react';
 import Menu from '@/app/components/Layouts/Menu';
 import { Checkbox } from '@/app/components/Checkbox';
 import { CHECK_BOX_LIST } from '@/constants';
+import { Card } from '@/app/components/Card';
 
 interface Props {
   temp: string;
@@ -50,6 +51,20 @@ export const Home: React.FC<Props> = ({ temp }) => {
         {checkedList.map((list) => (
           <Checkbox id={list.id} label={list.label} checked={list.checked} onClick={handleClickChecked} />
         ))}
+      </div>
+      <div className='flex w-full gap-5 flex-wrap'>
+        <div className='w-[200px] h-[200px]'>
+          <Card />
+        </div>
+        <div className='w-[200px] h-[200px]'>
+          <Card />
+        </div>
+        <div className='w-[200px] h-[200px]'>
+          <Card />
+        </div>
+        <div className='w-[200px] h-[200px]'>
+          <Card />
+        </div>
       </div>
     </div>
   );
