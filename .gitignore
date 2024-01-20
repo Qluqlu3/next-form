@@ -45,3 +45,4 @@ next-env.d.ts
 /src/app/components/dist
 /src/app/components/Layout/dist
 /src/constants/dist
+/src/app/pages/*/dist
