@@ -1,0 +1,17 @@
+export const CHECK_BOX_LIST = [
+	{ id: 1, label: 'ラベル1', checked: false },
+	{ id: 2, label: 'ラベル2', checked: false },
+	{ id: 3, label: 'ラベル3', checked: false },
+	{ id: 4, label: 'ラベル4', checked: false },
+	{ id: 5, label: 'ラベル5', checked: false },
+	{ id: 6, label: 'ラベル6', checked: false },
+	{ id: 7, label: 'ラベル7', checked: false },
+	{ id: 8, label: 'ラベル8', checked: false },
+	{ id: 9, label: 'ラベル9', checked: false },
+	{ id: 10, label: 'ラベル10', checked: false },
+	{ id: 11, label: 'ラベル11', checked: false },
+	{ id: 12, label: 'ラベル12', checked: false },
+	{ id: 13, label: 'ラベル13', checked: false },
+	{ id: 14, label: 'ラベル14', checked: false },
+	{ id: 15, label: 'ラベル15', checked: false },
+];
