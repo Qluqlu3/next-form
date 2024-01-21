@@ -4,6 +4,7 @@ import Menu from '@/app/components/Layouts/Menu';
 import { Checkbox } from '@/app/components/Checkbox';
 import { CHECK_BOX_LIST } from '@/constants';
 import { Card } from '@/app/components/Card';
+import { Layout } from '@/app/components/Layouts/Layout';
 
 interface Props {
   temp: string;
@@ -25,8 +26,7 @@ export const Home: React.FC<Props> = ({ temp }) => {
   }, []);
 
   return (
-    <div className='flex flex-col gap-y-8 bg-gray-300 min-h-screen p-5'>
-      <Menu />
+    <Layout>
       <h1 className='text-5xl font-bold'>Home</h1>
       <div className='flex gap-x-3 items-center'>
         <div>気温：</div>
@@ -66,6 +66,6 @@ export const Home: React.FC<Props> = ({ temp }) => {
           <Card />
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };

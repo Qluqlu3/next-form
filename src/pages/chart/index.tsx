@@ -14,13 +14,7 @@ interface Props {}
 // };
 
 const Chart: React.FC<Props> = ({}: Props): JSX.Element => {
-  return (
-    <div className='flex flex-col gap-y-8 bg-gray-300 min-h-screen p-5'>
-      <Menu />
-      <h1 className='text-5xl font-bold'>CHART</h1>
-      <ChartPage />;
-    </div>
-  );
+  return <ChartPage />;
 };
 
 export default Chart;
