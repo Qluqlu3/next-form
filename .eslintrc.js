@@ -6,8 +6,10 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['next'],
+  plugins: ['import'],
   extends: [
+    'next',
+    'next/core-web-vitals',
     'eslint:recommended',
     'plugin:react/recommended',
     'eslint:recommended',
@@ -16,8 +18,13 @@ module.exports = {
   ],
   rules: {
     'no-unused-vars': 'error',
-    'no-unused-imports': 'error',
     'react/prop-types': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
+    'import/no-unresolved': 'error',
+    'import/named': 'error',
+    'import/default': 'error',
+    'import/namespace': 'error',
+    'import/export': 'error',
+    'import/no-unused-modules': 'error',
   },
 };

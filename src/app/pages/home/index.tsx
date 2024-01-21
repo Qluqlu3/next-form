@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 
-import Menu from '@/app/components/Layouts/Menu';
 import { Checkbox } from '@/app/components/Checkbox';
 import { CHECK_BOX_LIST } from '@/constants';
 import { Card } from '@/app/components/Card';
