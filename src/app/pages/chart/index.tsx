@@ -1,10 +1,11 @@
 import React from 'react';
 import { BarChart } from '@/app/components/BarChart';
+import { Layout } from '@/app/components/Layouts/Layout';
 
 export const ChartPage = () => {
   return (
-    <div className='h-screen bg-gray-400'>
+    <Layout>
       <BarChart />
-    </div>
+    </Layout>
   );
 };

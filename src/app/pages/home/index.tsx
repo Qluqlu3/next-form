@@ -26,8 +26,8 @@ export const Home: React.FC<Props> = ({ temp }) => {
 
   return (
     <div className='flex flex-col gap-y-8 bg-gray-300 min-h-screen p-5'>
-      <h1 className='text-5xl font-bold'>Home</h1>
       <Menu />
+      <h1 className='text-5xl font-bold'>Home</h1>
       <div className='flex gap-x-3 items-center'>
         <div>気温：</div>
         <span className='block font-semibold text-3xl text-red-600'>{temp}</span>
