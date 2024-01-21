@@ -1,15 +1,17 @@
-/** アイコン付きリンク */
+/**
+ * アイコン付きリンク
+ */
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React, { ReactElement, ReactNode } from 'react';
 import { clsx } from 'clsx';
 
-interface Props {
+type Props = {
   href: string;
   icon: ReactElement;
   prefetch?: boolean;
   children?: ReactNode;
-}
+};
 
 export const IconLink: React.FC<Props> = ({ icon, href = '/home', prefetch, children }: Props) => {
   const { asPath } = useRouter();

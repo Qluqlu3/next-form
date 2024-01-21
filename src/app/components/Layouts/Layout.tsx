@@ -1,9 +1,9 @@
 import React from 'react';
 import Menu from './Menu';
 
-interface Props {
+type Props = {
   children: React.ReactNode;
-}
+};
 
 export const Layout: React.FC<Props> = ({ children }: Props) => {
   return (

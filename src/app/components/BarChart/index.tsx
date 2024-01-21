@@ -2,7 +2,7 @@ import React from 'react';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartOptions } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
-interface Props {}
+type Props = {};
 
 export const BarChart: React.FC<Props> = ({}: Props) => {
   ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
