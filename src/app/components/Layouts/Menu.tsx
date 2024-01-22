@@ -2,7 +2,7 @@ import React from 'react';
 import { MdHome, MdComment, MdEqualizer, MdSettings } from '../Icon';
 import { IconLink } from '../IconLink';
 
-const Menu: React.FC = () => {
+export const Menu: React.FC = () => {
   return (
     <div className='flex flex-row gap-x-3 items-center'>
       <IconLink icon={<MdHome className='w-12 h-12' />} href='/home'></IconLink>
@@ -12,5 +12,3 @@ const Menu: React.FC = () => {
     </div>
   );
 };
-
-export default Menu;
