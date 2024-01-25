@@ -3,7 +3,7 @@ import React, { useCallback, useState } from 'react';
 import { Checkbox } from '@/app/components/Form/Checkbox/Checkbox';
 import { CHECK_BOX_LIST } from '@/constants';
 import { Card } from '@/app/components/Card';
-import { Layout } from '@/app/components/Layouts/Layout';
+import { Layout } from '@/app/layout';
 
 interface Props {
   temp: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BarChart } from '@/app/components/BarChart';
-import { Layout } from '@/app/components/Layouts/Layout';
+import { Layout } from '@/app/layout';
 
 export const ChartPage = () => {
   return (
