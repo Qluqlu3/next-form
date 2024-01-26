@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu } from './Layouts/Menu';
+import { Menu } from '../components/Menu';
 
 type Props = {
   children: React.ReactNode;

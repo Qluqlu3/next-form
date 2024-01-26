@@ -3,7 +3,7 @@ import { GetServerSideProps } from 'next';
 import React from 'react';
 
 import '../../style/style.css';
-import { Home } from '@/app/pages/home';
+import { Home } from '@/app/home/page';
 
 interface Props {
   weatherData?: number;

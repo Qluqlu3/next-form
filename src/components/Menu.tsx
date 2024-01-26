@@ -2,8 +2,8 @@
  * グローバルメニュー
  */
 import React from 'react';
-import { MdHome, MdComment, MdEqualizer, MdSettings } from '../components/Icon';
-import { IconLink } from '../components/IconLink';
+import { MdHome, MdComment, MdEqualizer, MdSettings } from './Icon';
+import { IconLink } from './IconLink';
 
 export const Menu: React.FC = () => {
   return (

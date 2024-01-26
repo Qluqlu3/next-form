@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart } from '@/app/components/BarChart';
+import { BarChart } from '@/components/BarChart';
 import { Layout } from '@/app/layout';
 
 export const ChartPage = () => {

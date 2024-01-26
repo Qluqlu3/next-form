@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../../style/style.css';
-import { ChartPage } from '@/app/pages/chart';
+import { ChartPage } from '@/app/chart/page';
 
 interface Props {}
 
