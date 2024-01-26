@@ -2,9 +2,9 @@
  * アイコン付きリンク
  */
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import React, { ReactElement, ReactNode } from 'react';
-import { clsx } from 'clsx';
+// import { clsx } from 'clsx';
 
 type Props = {
   href: string;
@@ -14,13 +14,13 @@ type Props = {
 };
 
 export const IconLink: React.FC<Props> = ({ icon, href = '/home', prefetch, children }: Props) => {
-  const { asPath } = useRouter();
+  // const { asPath } = useRouter();
 
   return (
     <Link
       href={href}
       prefetch={prefetch}
-      className={clsx(href === asPath ? 'bg-green-500' : 'hover:bg-green-100', 'rounded-xl cursor-pointer p-2')}
+      // className={clsx(href === asPath ? 'bg-green-500' : 'hover:bg-green-100', 'rounded-xl cursor-pointer p-2')}
     >
       <div className='flex'>
         <div>{icon}</div>
