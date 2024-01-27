@@ -22,7 +22,7 @@ export const IconLink: React.FC<Props> = ({ icon, href = '/home', prefetch, chil
     <Link
       href={href}
       prefetch={prefetch}
-      className={clsx(href === path ? 'bg-green-500' : 'hover:bg-green-100', 'rounded-xl cursor-pointer p-2')}
+      className={clsx(href === path ? 'bg-green-700' : 'hover:bg-slate-500', 'rounded-xl cursor-pointer p-2')}
     >
       <div className='flex'>
         <div>{icon}</div>

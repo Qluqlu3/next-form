@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ja'>
-      <body className={`${inter.className} p-4`}>
+      <body className={`${inter.className} grid grid-flow-col bg-slate-200`}>
         <Menu />
-        {children}
+        <div>{children}</div>
       </body>
     </html>
   );
