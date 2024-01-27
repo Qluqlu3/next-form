@@ -2,10 +2,10 @@
  * グローバルメニュー
  */
 import React from 'react';
-import { MdHome, MdComment, MdEqualizer, MdSettings } from './Icon';
-import { IconLink } from './IconLink';
+import { MdHome, MdComment, MdEqualizer, MdSettings } from '../Icon';
+import { IconLink } from '../IconLink';
 
-export const Menu: React.FC = () => {
+export const Menu: React.FC = (): JSX.Element => {
   return (
     <div className='flex flex-row gap-x-3 items-center'>
       <IconLink icon={<MdHome className='w-12 h-12' />} href='/home'></IconLink>
