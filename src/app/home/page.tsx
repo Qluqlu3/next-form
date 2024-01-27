@@ -37,11 +37,12 @@
 //   );
 // };
 
-// import axios from 'axios';
-// import { GetServerSideProps } from 'next';
+import axios from 'axios';
+import { GetServerSideProps } from 'next';
 import React from 'react';
 
 import '../../app/globals.css';
+import { Home } from './';
 // import Home from '../pages';
 
 interface Props {
@@ -50,30 +51,44 @@ interface Props {
 }
 
 // サーバーサイドでデータを取得する関数
-// export const getServerSideProps: GetServerSideProps<Props> = async () => {
-//   try {
-//     const response = await axios.get(
-//       'https://samples.openweathermap.org/data/2.5/weather?q=Tokyo&appid=b6907d289e10d714a6e88b30761fae22',
-//     );
-//     const weatherData = response.data.main.temp;
-//     if (response.status !== 200) {
-//       throw new Error(`API request failed with status ${response.status}`);
-//     }
-//     return { props: { weatherData } };
-//   } catch (error) {
-//     console.error('Error fetching data:', error);
+export const getData = async () => {
+  try {
+    const response = await fetch(
+      'https://samples.openweathermap.org/data/2.5/weather?q=Tokyo&appid=b6907d289e10d714a6e88b30761fae22',
+      { cache: 'no-store' },
+    ).then((response) => response.json());
 
-//     return {
-//       props: {
-//         error: 'Failed to fetch data',
-//       },
-//     };
-//   }
-// };
+    // console.log('res', response.cod);
 
-const Home: React.FC<Props> = ({ weatherData, error }: Props): JSX.Element => {
-  return <>AAAAAA</>;
-  // return error ? <>ERROR</> : <Home temp={`${((weatherData ?? 0) - 273.15).toFixed(1).toString()}`} />;
+    const weatherData = response?.weather?.main?.temp;
+    if (response.cod !== 200) {
+      throw new Error(`API request failed with status ${response.status}`);
+    }
+    return { props: { weatherData } };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+
+    return {
+      props: {
+        error: 'Failed to fetch data',
+      },
+    };
+  }
 };
 
-export default Home;
+export default async function Page() {
+  // return <>AAAAAA</>;
+  const weatherData = await getData();
+
+  console.log(weatherData.props);
+  return weatherData.props.error ? (
+    <>
+      <>{weatherData.props.weatherData}</>
+      <>ERROR!!!!!</>
+    </>
+  ) : (
+    // <Home temp={`${(weatherData.props.weatherData ?? 0 - 273.15).toFixed(1).toString()}`}></Home>
+    <Home></Home>
+  );
+  // return <Home />;
+}
